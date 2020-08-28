@@ -1,9 +1,9 @@
 import numpy as np
 import numpy.linalg as npla
 
-def LU(A,f):
+def LU(A,Entradas):
     # get the size of the system
-    n = len(f)
+    n = len(Entradas)
     
     # check the size
     
@@ -15,7 +15,7 @@ def LU(A,f):
     # create the augmented matrix
     M = np.zeros((n,n+1))
     M[:,:-1] = A
-    M[:,-1] = f
+    M[:,-1] = Entradas
 
     # loop through all the colum
     # to get rid of the lower part
